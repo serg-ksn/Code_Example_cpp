@@ -1,0 +1,34 @@
+// Created by serg-Ksn 17.03.2019
+// It's a simple game with a entered number:
+// 1. You enter number from 1 to 100
+// 2. Programm compare it with random created number. If it match in first step - yo win.
+// 3. If you need the list of ramdom created numbers - you can request it.
+// 4. Profit!!!
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i,j,k = 0;
+    //char str[];
+     do 
+    {
+        cout<<"Please, enter a single number from 1 to 100:\n";
+        cin >> i;    
+    }
+   while (i>100 && i<1);
+   do 
+   {
+       j = 1 + rand() % 100;
+       ++k;
+   }
+    while (i!=j);
+    if k == 1 
+        cout<< "You win!\n";
+    else
+    cout << "Number of iterrations is "<< k << endl;
+    
+    return 0;
+}
