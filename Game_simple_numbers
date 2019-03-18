@@ -6,6 +6,8 @@
 // 4. Profit!!!
 
 #include <iostream>
+#include <ctime>
+
 
 using namespace std;
 
@@ -21,11 +23,12 @@ int main()
    while (i>100 && i<1);
    do 
    {
+       srand(time(0));
        j = 1 + rand() % 100;
        ++k;
    }
     while (i!=j);
-    if k == 1 
+    if (k == 1) 
         cout<< "You win!\n";
     else
     cout << "Number of iterrations is "<< k << endl;
